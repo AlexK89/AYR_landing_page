@@ -59,7 +59,7 @@
 			<div class="bullet-item-img">
 				<img src="./img/dollar.svg" alt="airplane icon">
 			</div>
-			<h4>Great value, no commitments</h4>
+			<h4>Great value, no subscription</h4>
 			<p class="bullet-item-text">We provide the best value in the industry, without the subscription fee</p>
 		</a>
 		<a class="bullet-item" href="#bullet-point-3">
@@ -165,10 +165,15 @@
 	var arrow = document.querySelectorAll('.arrow');
 	var showPopup = document.querySelector('.show-popup img');
 	var closeIcon = document.querySelector('.close_icon');
+	var journey = document.querySelector('.book_journey button');
 	var counter = 0;
 
 	closeIcon.addEventListener('click', function () {
 		document.querySelector('.popup').classList.remove("active");
+	})
+
+	journey.addEventListener('click', function () {
+		document.querySelector('.popup').classList.add("active");
 	})
 
 	showPopup.addEventListener('click', function () {
