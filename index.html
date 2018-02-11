@@ -169,8 +169,11 @@
 	var counter = 0;
 
 	closeIcon.addEventListener('click', function () {
+		app[counter].classList.remove("active");
+		counter = 0;
+		app[counter].classList.add("active");
 		document.querySelector('.popup').classList.remove("active");
-	})
+	});
 
 	journey.addEventListener('click', function () {
 		document.querySelector('.popup').classList.add("active");
