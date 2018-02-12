@@ -252,6 +252,10 @@ a {
     letter-spacing: 4px;
     color: #5d5d5d;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.3); }
+    @media screen and (max-width: 1024px) {
+      .bullet-point h1 {
+        top: 45%;
+        font-size: 4rem; } }
   .bullet-point .container {
     height: 100%; }
     .bullet-point .container .container-content {
@@ -265,6 +269,11 @@ a {
       font-size: 2rem;
       line-height: 3rem;
       font-style: italic; }
+      @media screen and (max-width: 1024px) {
+        .bullet-point .container .container-content {
+          width: 100%;
+          height: 55%;
+          top: 45%; } }
       .bullet-point .container .container-content hr {
         border: none;
         border-bottom: 1px solid #dedede;
@@ -274,23 +283,44 @@ a {
   background: url("../img/card_2.jpg") no-repeat center center; }
   .bullet-point:nth-child(odd) h1 {
     left: 40px; }
+    @media screen and (max-width: 1024px) {
+      .bullet-point:nth-child(odd) h1 {
+        left: 40px;
+        right: auto; } }
   .bullet-point:nth-child(odd) .container {
     background: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0)); }
+    @media screen and (max-width: 1024px) {
+      .bullet-point:nth-child(odd) .container {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #fff 40%); } }
     .bullet-point:nth-child(odd) .container .container-content {
       float: left; }
+      @media screen and (max-width: 1024px) {
+        .bullet-point:nth-child(odd) .container .container-content {
+          float: none; } }
       .bullet-point:nth-child(odd) .container .container-content img {
         position: absolute;
         width: 80px;
         bottom: 50px;
         left: 50px;
         opacity: 0.5; }
+        @media screen and (max-width: 1024px) {
+          .bullet-point:nth-child(odd) .container .container-content img {
+            bottom: 20%;
+            left: calc(50% - 40px); } }
 
 .bullet-point:nth-child(even) {
   background: url("../img/card_2.jpg") no-repeat center center; }
   .bullet-point:nth-child(even) h1 {
     right: 40px; }
+    @media screen and (max-width: 1024px) {
+      .bullet-point:nth-child(even) h1 {
+        left: 40px;
+        right: auto; } }
   .bullet-point:nth-child(even) .container {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0), #fff 50%); }
+    @media screen and (max-width: 1024px) {
+      .bullet-point:nth-child(even) .container {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #fff 40%); } }
     .bullet-point:nth-child(even) .container .container-content {
       float: right; }
       .bullet-point:nth-child(even) .container .container-content img {
@@ -299,6 +329,10 @@ a {
         bottom: 50px;
         right: 50px;
         opacity: 0.5; }
+        @media screen and (max-width: 1024px) {
+          .bullet-point:nth-child(even) .container .container-content img {
+            bottom: 20%;
+            left: calc(50% - 40px); } }
 
 .app {
   display: flex;
