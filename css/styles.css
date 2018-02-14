@@ -70,6 +70,11 @@ a {
     height: 270px;
     margin-top: -170px;
     margin-left: -423px; }
+    @media screen and (max-width: 1024px) {
+      .banner .banner-content {
+        left: initial;
+        margin-left: auto;
+        height: auto; } }
     .banner .banner-content .logo {
       display: inline-block; }
       .banner .banner-content .logo img {
@@ -97,6 +102,9 @@ a {
       letter-spacing: 2px;
       color: #ffffff;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.3); }
+      @media screen and (max-width: 1024px) {
+        .banner .banner-content h2 {
+          text-align: center; } }
 
 .contacts {
   background-color: #a87f74;
@@ -178,7 +186,7 @@ a {
   align-items: center;
   align-content: center;
   min-height: 100vh;
-  padding: 70px 5%;
+  padding: 70px 20px;
   background: url("../img/card_1.jpg") no-repeat center center;
   background-size: cover; }
   .bullet-points-filter {
@@ -187,20 +195,18 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.43); }
   .bullet-points .container {
-    position: absolute;
-    width: 90%;
+    width: 100%;
     z-index: 10;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1800px;
-    margin: 0 auto; }
+    max-width: 1800px; }
     .bullet-points .container .bullet-item {
       display: flex;
       flex-direction: column;
       width: 40%;
       min-width: 300px;
-      max-width: 350px;
+      max-width: 320px;
       text-decoration: none;
       padding: 15px;
       margin: 20px 10px;
@@ -209,6 +215,9 @@ a {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       cursor: default; }
+      @media screen and (max-width: 768px) {
+        .bullet-points .container .bullet-item {
+          min-width: 320px; } }
       .bullet-points .container .bullet-item:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         background-color: #ffffff;
@@ -277,7 +286,8 @@ a {
       .bullet-point .container .container-content hr {
         border: none;
         border-bottom: 1px solid #dedede;
-        width: 30%; }
+        width: 30%;
+        margin: 0 auto; }
 
 .bullet-point:nth-child(odd) {
   background: url("../img/card_2.jpg") no-repeat center center; }
@@ -305,8 +315,7 @@ a {
         opacity: 0.5; }
         @media screen and (max-width: 1024px) {
           .bullet-point:nth-child(odd) .container .container-content img {
-            bottom: 20%;
-            left: calc(50% - 40px); } }
+            display: none; } }
 
 .bullet-point:nth-child(even) {
   background: url("../img/card_2.jpg") no-repeat center center; }
@@ -331,8 +340,7 @@ a {
         opacity: 0.5; }
         @media screen and (max-width: 1024px) {
           .bullet-point:nth-child(even) .container .container-content img {
-            bottom: 20%;
-            left: calc(50% - 40px); } }
+            display: none; } }
 
 .app {
   display: flex;
