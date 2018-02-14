@@ -23,7 +23,19 @@ a {
   position: fixed;
   top: 0;
   z-index: 100; }
-  .navigation img {
+  .navigation .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 40px;
+    width: 40px; }
+    @media screen and (max-width: 768px) {
+      .navigation .dropdown-menu {
+        display: block; } }
+    .navigation .dropdown-menu img {
+      width: 40px; }
+  .navigation .nav_logo {
     position: absolute;
     height: 50px;
     top: 10px;
@@ -33,7 +45,21 @@ a {
     justify-content: center;
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    transition: 0.3s; }
+    @media screen and (max-width: 768px) {
+      .navigation ul {
+        display: block;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        background-color: #FFFFFF;
+        overflow: hidden;
+        height: 0;
+        text-align: right; }
+        .navigation ul.active {
+          height: 280px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); } }
     .navigation ul li {
       line-height: 70px;
       transition: .3s; }
@@ -158,20 +184,18 @@ a {
   line-height: 2.5rem; }
   @media screen and (max-width: 1024px) {
     .business-model {
-      padding: 70px 10%; } }
+      padding: 70px 5%; } }
   .business-model .container {
     max-width: 1800px;
     margin: 0 auto; }
     .business-model .container h2 {
       display: block;
       font-size: 3.2rem;
+      line-height: 4rem;
       color: #a87f74;
       letter-spacing: 3px;
       width: 100%;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.16); }
-      @media screen and (max-width: 1024px) {
-        .business-model .container h2 {
-          line-height: 4rem; } }
     .business-model .container p {
       color: #5d5d5d;
       font-style: italic;
@@ -427,6 +451,9 @@ footer {
       height: 60px;
       transform: rotate(180deg);
       transition: 0.3s; }
+      @media screen and (max-width: 768px) {
+        .popup .our_app .arrow_left {
+          left: 20px; } }
       .popup .our_app .arrow_left:active {
         transform: rotate(180deg) scale(0.9); }
     .popup .our_app .arrow_right {
@@ -436,6 +463,9 @@ footer {
       margin-top: -30px;
       height: 60px;
       transition: 0.3s; }
+      @media screen and (max-width: 768px) {
+        .popup .our_app .arrow_right {
+          right: 20px; } }
       .popup .our_app .arrow_right:active {
         transform: scale(0.9); }
     .popup .our_app .our_app-img {
@@ -445,7 +475,11 @@ footer {
         display: none;
         height: 100vh;
         margin: 0 auto; }
-        .popup .our_app .our_app-img img.active {
+        @media screen and (max-width: 768px) {
+          .popup .our_app .our_app-img img {
+            height: auto;
+            width: 75%; } }
+        .popup .our_app .our_app-img img.active_img {
           display: block; }
 
 .book_journey {

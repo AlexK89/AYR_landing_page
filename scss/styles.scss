@@ -28,7 +28,24 @@ a {
 	top: 0;
 	z-index: 100;
 
-	img {
+	.dropdown-menu {
+		display: none;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		height: 40px;
+		width: 40px;
+
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+
+		img {
+			width: 40px;
+		}
+	}
+
+	.nav_logo {
 		position: absolute;
 		height: 50px;
 		top: 10px;
@@ -40,6 +57,23 @@ a {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		transition: 0.3s;
+
+		@media screen and (max-width: 768px) {
+			display: block;
+			position: absolute;
+			top: 70px;
+			width: 100%;
+			background-color: #FFFFFF;
+			overflow: hidden;
+			height: 0;
+			text-align: right;
+
+			&.active {
+				height: 280px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			}
+		}
 
 		li {
 			line-height: 70px;
@@ -201,7 +235,7 @@ a {
 	line-height: 2.5rem;
 
 	@media screen and (max-width: 1024px) {
-		padding: 70px 10%;
+		padding: 70px 5%;
 	}
 
 	.container {
@@ -211,14 +245,11 @@ a {
 		h2 {
 			display: block;
 			font-size: 3.2rem;
+			line-height: 4rem;
 			color: #a87f74;
 			letter-spacing: 3px;
 			width: 100%;
 			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
-
-			@media screen and (max-width: 1024px) {
-				line-height: 4rem;
-			}
 		}
 
 		p {
@@ -563,6 +594,10 @@ footer {
 			transform: rotate(180deg);
 			transition: 0.3s;
 
+			@media screen and (max-width: 768px) {
+				left: 20px;
+			}
+
 			&:active {
 				transform: rotate(180deg) scale(0.9);
 			}
@@ -574,6 +609,10 @@ footer {
 			margin-top: -30px;
 			height: 60px;
 			transition: 0.3s;
+
+			@media screen and (max-width: 768px) {
+				right: 20px;
+			}
 
 			&:active {
 				transform: scale(0.9);
@@ -588,7 +627,12 @@ footer {
 				height: 100vh;
 				margin: 0 auto;
 
-				&.active {
+				@media screen and (max-width: 768px) {
+					height: auto;
+					width: 75%;
+				}
+
+				&.active_img {
 					display: block;
 				}
 			}

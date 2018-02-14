@@ -5,24 +5,28 @@ var closeIcon = document.querySelector('.close_icon');
 var journey = document.querySelector('.book_journey button');
 var counter = 0;
 
-closeIcon.addEventListener('click', function () {
+closeIcon.addEventListener('click', function (ev) {
+	ev.stopPropagation();
 	app[counter].classList.remove("active");
 	counter = 0;
 	app[counter].classList.add("active");
 	document.querySelector('.popup').classList.remove("active");
 });
 
-journey.addEventListener('click', function () {
+journey.addEventListener('click', function (ev) {
+	ev.stopPropagation();
 	document.querySelector('.popup').classList.add("active");
 });
 
-showPopup.addEventListener('click', function () {
+showPopup.addEventListener('click', function (ev) {
+	ev.stopPropagation();
 	document.querySelector('.popup').classList.add("active");
 });
 
 // Arrows listener
 arrow.forEach(function (item) {
-	item.addEventListener('click', function () {
+	item.addEventListener('click', function (ev) {
+		ev.stopPropagation();
 		if (this.classList.contains('arrow_left')) {
 			scrollLeft();
 		}
@@ -45,17 +49,42 @@ document.addEventListener('keydown', function(event){
 // Slide left
 function scrollLeft() {
 	if (counter > 0) {
-		app[counter].classList.remove("active");
+		app[counter].classList.remove("active_img");
 		counter--;
-		app[counter].classList.add("active");
+		app[counter].classList.add("active_img");
 	}
 }
 
 // Slide right
 function scrollRight() {
 	if (counter < 3) {
-		app[counter].classList.remove("active");
+		app[counter].classList.remove("active_img");
 		counter++;
-		app[counter].classList.add("active");
+		app[counter].classList.add("active_img");
 	}
 }
+
+//Dropdown menu
+var showMenu = document.querySelector('#show-menu');
+
+showMenu.addEventListener('click', function (ev) {
+	ev.stopPropagation();
+
+	var menu = document.querySelector('.menu');
+
+	if (menu.classList.contains('active')) {
+		menu.classList.remove('active');
+	} else {
+		menu.classList.add('active');
+	}
+});
+
+//close popups when click outside
+document.querySelector('body').addEventListener('click', function () {
+	var activeClass = document.querySelectorAll('.active');
+
+	activeClass.forEach(function (value) {
+		value.classList.remove('active');
+		console.log('removed');
+	})
+});
