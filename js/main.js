@@ -5,14 +5,6 @@ var closeIcon = document.querySelector('.close_icon');
 var journey = document.querySelector('.book_journey button');
 var counter = 0;
 
-closeIcon.addEventListener('click', function (ev) {
-	ev.stopPropagation();
-	app[counter].classList.remove("active");
-	counter = 0;
-	app[counter].classList.add("active");
-	document.querySelector('.popup').classList.remove("active");
-});
-
 journey.addEventListener('click', function (ev) {
 	ev.stopPropagation();
 	document.querySelector('.popup').classList.add("active");
@@ -81,10 +73,8 @@ showMenu.addEventListener('click', function (ev) {
 
 //close popups when click outside
 document.querySelector('body').addEventListener('click', function () {
-	var activeClass = document.querySelectorAll('.active');
-
-	activeClass.forEach(function (value) {
-		value.classList.remove('active');
-		console.log('removed');
-	})
+	document.querySelector('.popup').classList.remove("active");
+	app[counter].classList.remove("active_img");
+	counter = 0;
+	app[counter].classList.add("active_img");
 });
