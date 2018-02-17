@@ -1,7 +1,6 @@
 var app = document.querySelectorAll('.popup .our_app-img img');
 var arrow = document.querySelectorAll('.arrow');
 var showPopup = document.querySelector('.show-popup img');
-var closeIcon = document.querySelector('.close_icon');
 var journey = document.querySelector('.book_journey button');
 var counter = 0;
 
@@ -73,7 +72,12 @@ showMenu.addEventListener('click', function (ev) {
 
 //close popups when click outside
 document.querySelector('body').addEventListener('click', function () {
-	document.querySelector('.popup').classList.remove("active");
+	var activeClass = document.querySelectorAll('.active');
+
+	activeClass.forEach(function (value) {
+		value.classList.remove('active');
+	});
+
 	app[counter].classList.remove("active_img");
 	counter = 0;
 	app[counter].classList.add("active_img");
