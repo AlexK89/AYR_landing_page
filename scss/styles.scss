@@ -442,6 +442,7 @@ a {
 		}
 
 		@media screen and (max-width: 480px) {
+			top: 210px;
 			font-size: 1.8rem;
 			line-height: 2.5rem;
 		}
@@ -468,10 +469,14 @@ a {
 			}
 
 			@media screen and (max-width: 480px) {
+				padding: 300px 40px 40px;
+				min-height: 640px;
 				font-size: 1.3rem;
 				line-height: 2rem;
+				top: auto;
+				background-color: inherit;
 			}
-			
+
 			hr {
 				border: none;
 				border-bottom: 1px solid #dedede;
@@ -507,6 +512,11 @@ a {
 			@media screen and (max-width: 1024px) {
 				float: none;
 			}
+
+			@media screen and (max-width: 480px) {
+				float: initial;
+			}
+
 			img {
 				position: absolute;
 				width: 80px;
@@ -543,6 +553,10 @@ a {
 		.container-content {
 			float: right;
 
+			@media screen and (max-width: 480px) {
+				float: initial;
+			}
+
 			img {
 				position: absolute;
 				width: 80px;
@@ -566,6 +580,9 @@ a {
 	height: 100vh;
 	padding: 70px 5%;
 
+	@media screen and (max-width: 480px) {
+		height: auto;
+	}
 	.container {
 		display: flex;
 		justify-content: space-around;
@@ -573,10 +590,20 @@ a {
 		max-width: 1800px;
 		margin: 0 auto;
 
+		@media screen and (max-width: 480px) {
+			flex-direction: column;
+		}
+
 		.route {
 			height: 560px;
 			max-width: 50%;
 			position: relative;
+
+			@media screen and (max-width: 480px) {
+				height: auto;
+				max-width: 100%;
+				margin-bottom: 40px;
+			}
 
 			h1 {
 				margin: 0;
@@ -593,11 +620,19 @@ a {
 				display: block;
 				height: 60%;
 				margin: 20% auto;
+
+				@media screen and (max-width: 480px) {
+					display: none;
+				}
 			}
 		}
 		.our_app {
 			width: 395px;
 			position: relative;
+
+			@media screen and (max-width: 480px) {
+				width: auto;
+			}
 
 			.our_app-img {
 				width: 315px;
@@ -638,7 +673,7 @@ footer {
 	height: 100vh;
 	width: 100vw;
 	z-index: 200;
-	background-color: rgba(23, 23, 23, 0.73);
+	background-color: rgba(23, 23, 23, 0.9);
 
 	&.active {
 		display: block;
@@ -650,6 +685,11 @@ footer {
 		right: 30px;
 		width: 40px;
 		transition: .3s;
+
+		@media screen and (max-width: 480px) {
+			width: 20px;
+			top: 25px;
+		}
 
 		&:hover {
 			transform: rotate(180deg);
@@ -676,6 +716,10 @@ footer {
 				left: 20px;
 			}
 
+			@media screen and (max-width: 480px) {
+				height: 30px;
+				left: 10px;
+			}
 			&:active {
 				transform: rotate(180deg) scale(0.9);
 			}
@@ -692,6 +736,11 @@ footer {
 				right: 20px;
 			}
 
+			@media screen and (max-width: 480px) {
+				height: 30px;
+				right: 10px;
+			}
+
 			&:active {
 				transform: scale(0.9);
 			}
@@ -700,10 +749,14 @@ footer {
 			height: 100vh;
 			margin: 0 auto;
 
+			@media screen and (max-width: 480px) {
+				display: flex;
+			}
+
 			img {
 				display: none;
 				height: 100vh;
-				margin: 0 auto;
+				margin: auto;
 
 				@media screen and (max-width: 768px) {
 					height: auto;

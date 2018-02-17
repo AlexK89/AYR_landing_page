@@ -344,6 +344,7 @@ a {
         font-size: 4rem; } }
     @media screen and (max-width: 480px) {
       .bullet-point h1 {
+        top: 210px;
         font-size: 1.8rem;
         line-height: 2.5rem; } }
   .bullet-point .container {
@@ -366,8 +367,12 @@ a {
           top: 45%; } }
       @media screen and (max-width: 480px) {
         .bullet-point .container .container-content {
+          padding: 300px 40px 40px;
+          min-height: 640px;
           font-size: 1.3rem;
-          line-height: 2rem; } }
+          line-height: 2rem;
+          top: auto;
+          background-color: inherit; } }
       .bullet-point .container .container-content hr {
         border: none;
         border-bottom: 1px solid #dedede;
@@ -392,6 +397,9 @@ a {
       @media screen and (max-width: 1024px) {
         .bullet-point:nth-child(odd) .container .container-content {
           float: none; } }
+      @media screen and (max-width: 480px) {
+        .bullet-point:nth-child(odd) .container .container-content {
+          float: initial; } }
       .bullet-point:nth-child(odd) .container .container-content img {
         position: absolute;
         width: 80px;
@@ -417,6 +425,9 @@ a {
         background: linear-gradient(180deg, rgba(0, 0, 0, 0), #fff 40%); } }
     .bullet-point:nth-child(even) .container .container-content {
       float: right; }
+      @media screen and (max-width: 480px) {
+        .bullet-point:nth-child(even) .container .container-content {
+          float: initial; } }
       .bullet-point:nth-child(even) .container .container-content img {
         position: absolute;
         width: 80px;
@@ -434,16 +445,27 @@ a {
   align-content: center;
   height: 100vh;
   padding: 70px 5%; }
+  @media screen and (max-width: 480px) {
+    .app {
+      height: auto; } }
   .app .container {
     display: flex;
     justify-content: space-around;
     width: 100%;
     max-width: 1800px;
     margin: 0 auto; }
+    @media screen and (max-width: 480px) {
+      .app .container {
+        flex-direction: column; } }
     .app .container .route {
       height: 560px;
       max-width: 50%;
       position: relative; }
+      @media screen and (max-width: 480px) {
+        .app .container .route {
+          height: auto;
+          max-width: 100%;
+          margin-bottom: 40px; } }
       .app .container .route h1 {
         margin: 0;
         font-size: 3rem;
@@ -456,9 +478,15 @@ a {
         display: block;
         height: 60%;
         margin: 20% auto; }
+        @media screen and (max-width: 480px) {
+          .app .container .route img {
+            display: none; } }
     .app .container .our_app {
       width: 395px;
       position: relative; }
+      @media screen and (max-width: 480px) {
+        .app .container .our_app {
+          width: auto; } }
       .app .container .our_app .our_app-img {
         width: 315px;
         margin: 0 auto; }
@@ -488,7 +516,7 @@ footer {
   height: 100vh;
   width: 100vw;
   z-index: 200;
-  background-color: rgba(23, 23, 23, 0.73); }
+  background-color: rgba(23, 23, 23, 0.9); }
   .popup.active {
     display: block; }
   .popup .close_icon {
@@ -497,6 +525,10 @@ footer {
     right: 30px;
     width: 40px;
     transition: .3s; }
+    @media screen and (max-width: 480px) {
+      .popup .close_icon {
+        width: 20px;
+        top: 25px; } }
     .popup .close_icon:hover {
       transform: rotate(180deg); }
     .popup .close_icon:active {
@@ -515,6 +547,10 @@ footer {
       @media screen and (max-width: 768px) {
         .popup .our_app .arrow_left {
           left: 20px; } }
+      @media screen and (max-width: 480px) {
+        .popup .our_app .arrow_left {
+          height: 30px;
+          left: 10px; } }
       .popup .our_app .arrow_left:active {
         transform: rotate(180deg) scale(0.9); }
     .popup .our_app .arrow_right {
@@ -527,15 +563,22 @@ footer {
       @media screen and (max-width: 768px) {
         .popup .our_app .arrow_right {
           right: 20px; } }
+      @media screen and (max-width: 480px) {
+        .popup .our_app .arrow_right {
+          height: 30px;
+          right: 10px; } }
       .popup .our_app .arrow_right:active {
         transform: scale(0.9); }
     .popup .our_app .our_app-img {
       height: 100vh;
       margin: 0 auto; }
+      @media screen and (max-width: 480px) {
+        .popup .our_app .our_app-img {
+          display: flex; } }
       .popup .our_app .our_app-img img {
         display: none;
         height: 100vh;
-        margin: 0 auto; }
+        margin: auto; }
         @media screen and (max-width: 768px) {
           .popup .our_app .our_app-img img {
             height: auto;
