@@ -2,3 +2,6 @@
 *.map
 *.scssc
 *.xml
+*node_modules/
+*gulpfile.js
+*package-lock.json
