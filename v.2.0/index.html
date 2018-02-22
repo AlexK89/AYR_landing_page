@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>AYR - 2.0</title>
+</head>
+<body>
+<div class="navigation">
+	<div class="dropdown_menu">
+		<img src="./images/icons/menu.svg" alt="menu button" id="show-menu">
+	</div>
+	<div class="nav_logo">
+		<img src="./images/full_logo.png" alt="logo" class="logo">
+		<p>...at your request</p>
+	</div>
+
+	<ul class="menu">
+		<li class="nav_item"><a href="#banner">Home</a></li>
+		<li class="nav_item"><a href="#business-model">Business Model</a></li>
+		<li class="nav_item"><a href="#bullet-points">Advantages</a></li>
+		<li class="nav_item"><a href="#app">Application</a></li>
+	</ul>
+</div>
+<div class="main_banner">
+	<div class="images">
+		<img src="images/1.jpg" alt="private jet" class="active">
+		<img src="images/card_2.jpg" alt="private jet">
+	</div>
+	<div class="main_content">
+		<div class="arrows">
+			<div class="arrow_left">
+				<a href="#">
+					<img src="./images/icons/back.svg" alt="back arrow" class="arrow back_arrow">
+				</a>
+			</div>
+			<div class="arrow_right">
+				<a href="#">
+					<img src="./images/icons/next.svg" alt="next arrow" class="arrow next_arrow">
+				</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="text">
+				<p>Finally, an on-demand private jet option that won’t break the bank and won’t require a subscription!</p>
+				<button class="learn_more btn-large">Learn more</button>
+			</div>
+		</div>
+		<div class="form">
+			<form action="#">
+				<h2>Interested?</h2>
+				<p>Let's keep in touch</p>
+				<label for="name">Full Name</label>
+				<input type="text" id="name" placeholder="Your name" pattern="[A-Za-z]{,30}" required>
+				<label for="email">Email</label>
+				<input type="email" id="email" placeholder="Email" required>
+				<button type="submit" class="btn-large">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
