@@ -94,6 +94,6 @@ function showMainImage() {
 }
 
 (function () {
-	setInterval(increaseMainImageCounter, 7000);
+	setInterval(increaseMainImageCounter, 10000);
 })();
 // =========================================
