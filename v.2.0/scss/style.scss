@@ -15,6 +15,10 @@ a {
 	outline: 0;
 }
 
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
 .max_width_container {
 	height: 100%;
 	max-width: 1800px;
@@ -349,6 +353,30 @@ a {
 				.btn-large {
 					margin-top: 50px;
 				}
+			}
+		}
+	}
+}
+
+//Business model
+
+.how_it_works {
+	.items {
+		display: flex;
+		justify-content: space-between;
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			margin: 0 20px;
+			max-width: 400px;
+
+			.title {
+				flex: 1 1 auto;
+			}
+
+			.text {
+
 			}
 		}
 	}

@@ -11,6 +11,10 @@ body {
 a {
   outline: 0; }
 
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
 .max_width_container {
   height: 100%;
   max-width: 1800px; }
@@ -259,3 +263,14 @@ a {
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
         .main_banner .main_content .form form .btn-large {
           margin-top: 50px; }
+
+.how_it_works .items {
+  display: flex;
+  justify-content: space-between; }
+  .how_it_works .items .item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    max-width: 400px; }
+    .how_it_works .items .item .title {
+      flex: 1 1 auto; }
